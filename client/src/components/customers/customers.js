@@ -5,16 +5,16 @@ class Customers extends Component {
   constructor() {
     super();
     this.state = {
-      customers: []
+      weather: {}
     };
   }
 
   componentDidMount() {
     fetch("/api/weather")
       .then(res => res.json())
-      .then(customers =>
-        this.setState({ customers }, () =>
-          console.log("Customers fetched: " + customers)
+      .then(weather =>
+        this.setState({ weather }, () =>
+          console.log("Weather fetched: ", weather)
         )
       );
   }
@@ -22,7 +22,9 @@ class Customers extends Component {
   render() {
     return (
       <div>
-        <h2> Customers </h2>
+        <h2> Weather </h2>
+        <p> {this.state.weather.name} </p> {/* działa */}
+        <p> {this.state.weather.main.temp} </p> {/* nie działa */}
       </div>
     );
   }
