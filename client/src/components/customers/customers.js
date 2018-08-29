@@ -12,20 +12,14 @@ class Customers extends Component {
   componentDidMount() {
     fetch("/api/weather")
       .then(res => res.json())
-      .then(weather =>
-        this.setState({ weather }, () =>
-          console.log("Weather fetched: ", weather)
-        )
-      );
+      .then(weather => this.setState({ weather }, () => console.log(weather)));
   }
 
   render() {
-    return (
-      <div>
-        <h2> Weather </h2>
-        <p> {this.state.weather.name} </p> {/* działa */}
-        <p> {this.state.weather.main.temp} </p> {/* nie działa */}
-      </div>
+    return this.state.weather.main ? (
+      <p>{this.state.weather.coord.lon}</p>
+    ) : (
+      <span>Loading...</span>
     );
   }
 }
