@@ -26,7 +26,7 @@ Whole code looks like so:
 import React, { Component } from "react";
 import "./weather.css";
 
-class Customers extends Component {
+class Weather extends Component {
   constructor() {
     super();
     this.state = {
