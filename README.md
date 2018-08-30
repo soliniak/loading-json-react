@@ -24,7 +24,7 @@ Whole code looks like so:
 
 ```javascript
 import React, { Component } from "react";
-import "./customers.css";
+import "./weather.css";
 
 class Customers extends Component {
   constructor() {
@@ -49,6 +49,6 @@ class Customers extends Component {
   }
 }
 
-export default Customers;
+export default Weather;
 
 ```
