@@ -1,17 +1,29 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Customers from "./components/customers/customers";
+import Customers from "./components/displayTemp/displayTemp";
+import Bg from "./components/displayBackground/displayBackground";
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      weather: {}
+    };
+  }
+
+  componentDidMount() {
+    fetch("/api/weather")
+      .then(res => res.json())
+      .then(weather => this.setState({ weather }, () => console.log(weather)));
+  }
+
   render() {
-    return (
+    return this.state.weather.main ? (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <Customers />
+        <Bg temp={this.state.weather.main.temp} />
+        <Customers weatherData={this.state.weather} />
       </div>
+    ) : (
+      <span>Loading...</span>
     );
   }
 }
