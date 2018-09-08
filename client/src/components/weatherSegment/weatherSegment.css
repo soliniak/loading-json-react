@@ -1,0 +1,8 @@
+.weatherWindow {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
