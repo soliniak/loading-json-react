@@ -1,0 +1,9 @@
+.city {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 13px #000;
+  opacity: 0.7;
+  position: absolute;
+  top: 20px;
+}
