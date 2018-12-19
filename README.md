@@ -1,4 +1,4 @@
-# React problem with getting object nested in array/object.
+# Problem with getting object nested in object. [SOLVED]
 ![alt text](https://github.com/soliniak/node-react/blob/master/json.jpg "JSON image")
 <br>
 JSON I'm passing from ```server.js``` -> ```client/src/components/customers/customers.js``` is on the image above. <br>
