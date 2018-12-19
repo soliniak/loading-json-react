@@ -1,4 +1,4 @@
-# Problem with loading JSON - Object nested in object. [SOLVED]
+## Problem with loading JSON to React component - Object nested in object. [SOLVED]
 ![alt text](https://github.com/soliniak/node-react/blob/master/json.jpg "JSON image")
 <br>
 JSON I'm passing from ```server.js``` -> ```client/src/components/customers/customers.js``` is on the image above. <br>
